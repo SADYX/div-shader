@@ -1,23 +1,25 @@
-const SIZE = 100;
+import { DOM_MAP, SIZE } from "./global";
 
+const initBlocks = () => {
+    const containerDom = document.getElementById('container');
+    if (!containerDom) return; 
 
-const drawBlocks = (container: HTMLElement) => {
     for (let i = 0; i < SIZE; i++) {
         const row = document.createElement('div');
-        container.appendChild(row);
+        containerDom.appendChild(row);
 
         for (let j = 1; j <= SIZE; j++) {
-            const pixel = document.createElement('div');
-            pixel.className = `${SIZE - i}-${j}`;
-            pixel.style.backgroundColor = `rgba(${Math.random() * 255}, ${Math.random() * 255}, ${Math.random() * 255}, 1)`
-            row.appendChild(pixel);
+            const block = document.createElement('div');
+            const name = `${SIZE - i}-${j}`;
+            block.className = name;
+            block.style.backgroundColor = `rgba(${Math.random() * 255}, ${Math.random() * 255}, ${Math.random() * 255}, 1)`;
+            row.appendChild(block);
+            DOM_MAP.set(name, block);
         }
     }
 }
 
-const main = () => {
-    const containerDom = document.getElementById('container');
-    containerDom && drawBlocks(containerDom);
-}
 
-main();
+export {
+    initBlocks,
+}
