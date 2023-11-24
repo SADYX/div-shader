@@ -1,9 +1,18 @@
+import * as dat from 'dat.gui';
+
 const bindEvts = () => {
-    // rem size
-    const dom = document.getElementById('remSize');
-    dom?.addEventListener('input', (e: any) => {
-        document.documentElement.style.fontSize = `${e.target.value}px`;
-    });
+    // gui
+    const board = {
+        'block size': 9,
+    };
+
+    const gui = new dat.GUI();
+
+    gui
+        .add(board, 'block size', 1, 12, 1)
+        .onChange((e) => {
+            document.documentElement.style.fontSize = `${e}px`;
+        })
 }
 
 export {

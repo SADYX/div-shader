@@ -1,50 +1,39 @@
-class Vector2 {
+class Vector3 {
 
     x: number;
     y: number;
+    z: number;
 
-    constructor(x: number, y: number) {
+    constructor(x: number, y: number, z: number) {
         this.x = x;
         this.y = y;
-    }
-
-    get u() {
-        return this.x;
-    }
-
-    get v() {
-        return this.y;
-    }
-
-    get s() {
-        return this.x;
-    }
-
-    get t() {
-        return this.y;
+        this.z = z;
     }
 
     clone() {
-        return new Vector2(this.x, this.y);
+        return new Vector3(this.x, this.y, this.z);
     }
 
     addFactor(v: number) {
         this.x += v;
         this.y += v;
+        this.z += v;
 
         return this;
     }
 
-    add(v: Vector2) {
+    add(v: Vector3) {
         this.x += v.x;
         this.y += v.y;
+        this.z += v.z;
 
         return this;
     }
 
-    sub(v: Vector2) {
+    sub(v: Vector3) {
         this.x -= v.x;
         this.y -= v.y;
+        this.z -= v.z;
 
         return this;
     }
@@ -52,34 +41,33 @@ class Vector2 {
     scale(v: number) {
         this.x *= v;
         this.y *= v;
+        this.z *= v;
 
         return this;
     }
 
-    multiply(v: Vector2) {
+    multiply(v: Vector3) {
         this.x *= v.x;
         this.y *= v.y;
+        this.z *= v.z;
 
         return this;
     }
 
-    divide(v: Vector2) {
+    divide(v: Vector3) {
         this.x /= v.x;
         this.y /= v.y;
+        this.z /= v.z;
 
         return this;
     }
 
-    dot(v: Vector2) {
-        return this.x * v.x + this.y * v.y;
-    }
-
-    cross(v: Vector2) {
-        return this.x * v.y - this.y * v.x;
+    dot(v: Vector3) {
+        return this.x * v.x + this.y * v.y + this.z * v.z;
     }
 
     length() {
-        return Math.sqrt(this.x * this.x + this.y * this.y);
+        return Math.sqrt(this.x * this.x + this.y * this.y + this.z * this.z);
     }
 
     getNormal() {
@@ -89,10 +77,11 @@ class Vector2 {
     fn(f: (n: number) => number) {
         this.x = f(this.x);
         this.y = f(this.y);
+        this.z = f(this.z);
 
         return this;
     }
 
 }
 
-export { Vector2 };
+export { Vector3 };
