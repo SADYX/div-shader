@@ -15,7 +15,9 @@ npm start
 
 ### Inspiration
 Shader
+
 Ray Marching
+
 Signed Distance Function (SDF)
 
 ### License
