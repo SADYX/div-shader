@@ -10,7 +10,7 @@ type GUIBOARD = {
 const board: GUIBOARD = {
     'type': SHADER_TYPE_ENUM['gradient color'],
     'block size': 9,
-    'samples': 3,
+    'samples': 2,
 };
 
 const bindEvts = () => {
@@ -30,7 +30,7 @@ const bindEvts = () => {
         });
 
     gui
-        .add(board, 'samples', 1, 4, 1);
+        .add(board, 'samples', 1, 3, 1);
 }
 
 export {

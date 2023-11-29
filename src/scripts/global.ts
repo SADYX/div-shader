@@ -1,4 +1,4 @@
-const SIZE = 80;
+const SIZE = 50;
 
 const DOM_MAP = new Map<string, HTMLDivElement>();
 

@@ -99,7 +99,7 @@ class Vector2 {
     }
 
     getNormal() {
-        return this.clone().scale(this.length());
+        return this.clone().scale(1 / this.length());
     }
 
     fn(f: (n: number) => number) {
