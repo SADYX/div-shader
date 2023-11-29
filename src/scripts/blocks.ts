@@ -10,7 +10,7 @@ const initBlocks = () => {
 
         for (let j = 1; j <= SIZE; j++) {
             const block = document.createElement('div');
-            const name = `${SIZE - i}-${j}`;
+            const name = `${j}-${SIZE - i}`;
             block.className = name;
             block.style.backgroundColor = `rgba(${Math.random() * 255}, ${Math.random() * 255}, ${Math.random() * 255}, 1)`;
             row.appendChild(block);

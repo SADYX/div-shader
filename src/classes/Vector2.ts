@@ -24,6 +24,22 @@ class Vector2 {
         return this.y;
     }
 
+    set u(_v) {
+        this.x = _v;
+    }
+
+    set v(_v) {
+        this.y = _v;
+    }
+
+    set s(_v) {
+        this.x = _v;
+    }
+
+    set t(_v) {
+        this.y = _v;
+    }
+
     clone() {
         return new Vector2(this.x, this.y);
     }

@@ -12,6 +12,39 @@ class Vector4 {
         this.w = w;
     }
 
+    get r() {
+        return this.x;
+    }
+
+    get b() {
+        return this.y;
+    }
+
+    get g() {
+        return this.z;
+    }
+
+    get a() {
+        return this.w;
+    }
+
+    set r(v) {
+        this.x = v;
+    }
+
+    set b(v) {
+        this.y = v;
+    }
+
+    set g(v) {
+        this.z = v;
+    }
+
+    set a(v) {
+        this.w = v;
+    }
+
+
     clone() {
         return new Vector4(this.x, this.y, this.z, this.w);
     }
