@@ -30,7 +30,7 @@ const bindEvts = () => {
         });
 
     gui
-        .add(board, 'samples', 1, 3, 1);
+        .add(board, 'samples', 1, 4, 1);
 }
 
 export {
