@@ -1,5 +1,4 @@
 # div-shader
----
 ### Intro
 A demo simulates shader with typescript and html.
 
