@@ -2,7 +2,7 @@
 ### Intro
 A demo simulates shader with typescript and html.
 
-### usage
+### Usage
 ```
 git clone https://github.com/SADYX/div-shader.git
 ```
